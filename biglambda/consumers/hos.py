@@ -30,13 +30,13 @@ class FilledSketch(object):
         self._keyed = k
     def __call__(self, li, writer):
         return self._execute(li, writer)
-    def __repr__(self):
-        # output = "filled sketch: {n}\n    mapper: {m}\n    reducer: {r}\n    flags: {f}"
-        output = "{m}:{r}:{f}"
-        return output.format(n='test',
-                m=repr(self._m),
-                r=repr(self._r),
-                f=repr( (self._a, self._flattened, self._keyed) ))
+#    def __repr__(self):
+#        # output = "filled sketch: {n}\n    mapper: {m}\n    reducer: {r}\n    flags: {f}"
+#        output = "{m}:{r}:{f}"
+#        return output.format(n='test',
+#                m=repr(self._m),
+#                r=repr(self._r),
+#                f=repr( (self._a, self._flattened, self._keyed) ))
     def _execute(self, li, writer):
         m = writer(self._m)
         r = uncurry(writer(self._r))

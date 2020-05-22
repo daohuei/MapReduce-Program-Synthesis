@@ -1,7 +1,7 @@
 from argparse import ArgumentParser
 import os
 
-PATH = "/PATH/TO/THIS/FILE"
+PATH = "/home/biglambda/biglambda"
 
 parser = ArgumentParser("BigLambda - synthesizing MapReduce programs since 2015")
 parser.add_argument("-s", "--signature")
